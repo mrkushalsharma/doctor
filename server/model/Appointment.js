@@ -14,15 +14,15 @@ const AppoinmentSchema = new Schema({
         required: false
     },
     doctorName: {
-        type: Boolean,
+        type: String,
         required: true
     },
     appointmentDate: {
-        type: Date,
+        type: String,
         required: true
     },
     appointmentTime: {
-        type: Date,
+        type: String,
         required: true
     },
     timestamp: {

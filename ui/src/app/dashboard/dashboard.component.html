@@ -1,0 +1,30 @@
+<div class="container">
+  <h4>Appointment List</h4>
+  <br />
+  <table id="appointments">
+    <tr>
+      <th>Sn.</th>
+      <th>Full Name</th>
+      <th>Phone Number</th>
+      <th>Service</th>
+      <th>Doctor Name</th>
+      <th>Appointment Date</th>
+      <th>Appointment Time</th>
+      <th>Created At</th>
+    </tr>
+    <tr *ngFor="let item of datas; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ item.fullName }}</td>
+      <td>{{ item.phoneNumber }}</td>
+      <td>{{ item.services }}</td>
+      <td>{{ item.doctorName }}</td>
+      <td>{{ item.appointmentDate }}</td>
+      <td>{{ item.appointmentTime }}</td>
+      <td>{{ item.timestamp | date : "medium" }}</td>
+    </tr>
+    <tr *ngIf="!datas.length" colspan="7">
+      <td>No data available</td>
+    </tr>
+  </table>
+  <br />
+</div>

@@ -1,0 +1,5 @@
+<app-admin-header *ngIf="loggedIn$ | async"></app-admin-header>
+<div style="padding-top:60px;padding-bottom:60px;">
+  <router-outlet></router-outlet>
+</div>
+<app-admin-footer *ngIf="loggedIn$ | async"></app-admin-footer>
